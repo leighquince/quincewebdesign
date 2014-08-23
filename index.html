@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="shortcut icon" href="/static/festival/images/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Quince Web Design</title>
+</head>
+
+<body>
+  <div id="navigation-region">
+
+  </div>
+
+  <!-- main content goes here -->
+  <div id="main-region"></div>
+
+
+
+
+
+  <div id="dialog-region" class="no-scroll"></div>
+
+  <script src="/static/festival/javascript/dispatch.js"></script>
+  <script type="text/javascript">
+  window.applicationCache.addEventListener('updateready', function(e) {
+    if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+      // Browser downloaded a new app cache.
+      if (confirm('A new version of this site is available. Load it?')) {
+        window.location.reload();
+      }
+    } else {
+      // Manifest didn't changed. Nothing new to server.
+    }
+  }, false);
+  </script>
+  <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="/static/festival/css/ie.css"/>
+    <script src="/static/festival/javascripts/bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $('.btn').each(function(index, element){
+          var data =  $(this).html();
+          $(this).html('<strong class="ie-fix">'+data+'</strong>');
+        });
+      });
+    </script>
+  <![endif]-->
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</body>
+
+</html>
