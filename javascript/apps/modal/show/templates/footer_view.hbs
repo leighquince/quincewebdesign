@@ -1,0 +1,9 @@
+	{{#if cancel}}
+		<button class="btn js-cancel" data-dismiss="modal">{{HB_getTextField "cancel"}}</button>
+	{{/if}}
+	{{#if confirm}}
+   	<button class="btn btn-primary js-confirm">{{HB_getTextField "ok"}}</button>
+	{{/if}}
+	{{#if confirmDoNotRemind}}
+   	<button class="btn btn-primary js-confirm-no-remind">{{HB_getTextField "ok_and_dont_ask_again"}}</button>
+	{{/if}}

@@ -1,0 +1,4 @@
+div.tooltip-data {
+    /* display: inline-block; */
+    /* clear: both; */
+}
