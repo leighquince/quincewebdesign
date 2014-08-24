@@ -21,7 +21,6 @@ module.exports = function(grunt) {
       generate: {
         options: {
           basePath: 'build',
-          cache: ['images/*.*', 'css/*.css', 'fonts/*.*', 'javascript/*.*', ],
           network: ['http://*', 'https://*'],
           preferOnline: true,
           verbose: true,
@@ -29,8 +28,8 @@ module.exports = function(grunt) {
           hash: true,
           master: ['../index.html']
         },
-        src: ['some_files/*.html', 'js/*.min.js', 'css/*.css'],
-        dest: 'manifest.appcache'
+        src: ['images/*.*', 'css/*.css', 'fonts/*.*', 'javascript/*.*', ],
+        dest: 'build/cache.manifest'
       }
     },
     //task runner for minifying each of the pages JS and css  
@@ -39,6 +38,7 @@ module.exports = function(grunt) {
         options: {
           // This tells the require optimiser where out application starts. Normally this file loads all the dependencies itself but this will be entry point for the optimised file
           name: 'javascript/require_main',
+          mainConfigFile: 'javascript/require_main.js',
           // This is where the optimised file should be built to. This becomes the file that includes all the above modules and libraries
           out: 'build/javascript/qwd-built.js',
           // Without this the requireJS optimiser will not look formodules or libraries used within other modules. Without it the optimised application will still rely on HTTP requests to load modules or libraries
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
             mangle: false
           },
           optimize: 'uglify2',
-          include: 'bower_components/require/build/require'
+          include: 'bower_components/require/build/require.js'
         }
       },
       compileCSS: {
@@ -64,18 +64,6 @@ module.exports = function(grunt) {
     },
     // image optimization
     imagemin: {
-      png: {
-        files: [{
-          // Set to true to enable the following options…
-          expand: true,
-          // cwd is 'current working directory'
-          cwd: 'images/',
-          src: ['**/*.png'],
-          // Could also match cwd line above. i.e. project-directory/img/
-          dest: 'build/images',
-          ext: '.png'
-        }]
-      },
       jpg: {
         options: {
           progressive: true,
@@ -86,7 +74,7 @@ module.exports = function(grunt) {
           expand: true,
           // cwd is 'current working directory'
           cwd: 'images/',
-          src: ['**/*.jpg'],
+          src: ['*.jpg'],
           // Could also match cwd. i.e. project-directory/img/
           dest: 'build/images',
           ext: '.jpg'
@@ -102,12 +90,24 @@ module.exports = function(grunt) {
           expand: true,
           // cwd is 'current working directory'
           cwd: 'images/',
-          src: ['**/*.gif'],
+          src: ['*.gif'],
           // Could also match cwd. i.e. project-directory/img/
           dest: 'build/images',
           ext: '.gif'
         }]
-      }
+      },
+      png: {
+        files: [{
+          // Set to true to enable the following options…
+          expand: true,
+          // cwd is 'current working directory'
+          cwd: 'images/',
+          src: ['*.png'],
+          // Could also match cwd line above. i.e. project-directory/img/
+          dest: 'build/images',
+          ext: '.png'
+        }]
+      },
     },
     copy: {
       main: {
@@ -139,7 +139,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
-  grunt.registerTask('build', ['requirejs', 'imagemin', 'copy', 'generate']);
+  grunt.loadNpmTasks('grunt-manifest');
+  grunt.registerTask('build', ['requirejs', 'imagemin', 'copy', 'manifest']);
   grunt.registerTask('test', ['jasmine']);
   grunt.registerTask('default', ['build']);
 };
