@@ -1,9 +1,46 @@
-body{
-	/*background-image: url('/static/festival/images/gplaypattern.png')*/
-	background-color: #34495e
+body {
+  background-color: #34495e
 }
-
-
-#main-region{
-	margin-top: 50px;
+#main-region {
+  float: left;
+  overflow: auto;
+}
+#vanity-region {
+  float: left;
+  background-image: url('../images/gplaypattern.png');
+}
+@media print {
+  #vanity-region {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px
+  }
+  #main-region {
+    width: 100%;
+  }
+}
+@media only screen {
+  #vanity-region {
+    width: 100%;
+    height: 200px;
+  }
+  #main-region {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+  #vanity-region {
+    width: 250px;
+  }
+  #main-region {
+    width: calc(100% - 250px);
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  #vanity-region {
+    width: 250px;
+  }
+  #main-region {
+    width: calc(100% - 250px);
+  }
 }

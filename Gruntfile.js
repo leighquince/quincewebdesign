@@ -112,11 +112,11 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files: [
-          //get the dispatch file
+          //get the ie css file
           {
             expand: true,
-            src: ['javascript/dispatch.js'],
-            dest: 'build/javascript/',
+            src: ['css/ie.css'],
+            dest: 'build/css/',
             flatten: true,
             filter: 'isFile'
           },

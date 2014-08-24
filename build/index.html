@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html manifest="cache.manifest">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link rel="shortcut icon" href="images/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/qwd-styles.min.css" />
   <title>Quince Web Design</title>
 </head>
 
@@ -25,7 +26,7 @@
 
   <div id="dialog-region" class="no-scroll"></div>
 
-  <script src="javascript/dispatch.js"></script>
+  <script src="javascript/qwd-built.js"></script>
   <script type="text/javascript">
   window.applicationCache.addEventListener('updateready', function(e) {
     if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
@@ -40,7 +41,6 @@
   </script>
   <!--[if IE]>
     <link rel="stylesheet" type="text/css" href="css/ie.css"/>
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript">
       jQuery(document).ready(function($) {
         $('.btn').each(function(index, element){

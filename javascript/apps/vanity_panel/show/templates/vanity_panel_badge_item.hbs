@@ -1,0 +1,17 @@
+<div class="vanity-panel-img">
+	<img src="{{src}}" class="circle" alt="me" />
+</div>
+<div class="vanity-panel-text">
+	{{name}}
+</div>
+
+<div class="vanity-panel-details">
+	<ul class="no-bullet">
+		{{#each details}}
+			<li>
+				<span class="detail-icon"><i class="fa {{icon}}"></i></span>
+				<span class="detail-value">{{value}}</span>
+				</li>
+		{{/each}}
+	</ul>
+</div>
