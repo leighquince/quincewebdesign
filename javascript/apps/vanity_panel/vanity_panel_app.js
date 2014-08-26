@@ -3,9 +3,18 @@ define(["app",
     ],
     function(App, ShowController) {
         App.module("VanityPanelApp", function(VanityPanelApp, App, Backbone, Marionette, $, _) {
-            var API = {};
-            VanityPanelApp.on("start", function() {
-                VanityPanelApp.showController = new ShowController();
+            var API = {
+                showVanityPanel: function(model) {
+                    VanityPanelApp.showController = new ShowController({
+                        model: model
+                    });
+                }
+
+            };
+
+
+            App.on("vanity_panel:show", function(model) {
+                API.showVanityPanel(model);
             });
         });
         return App.VanityPanelApp;

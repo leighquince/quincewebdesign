@@ -2,11 +2,18 @@
   border-radius: 161px;
   height: 150px;
   width: 150px;
-  border: 10px solid #ccc;
+  border: 5px solid #ccc;
+  box-shadow: rgba(0, 0, 0, 1.7) 0px 0px 30px;
+  transition: all 1s ease-in;
+}
+#vanity-region img.circle:hover {
+  -moz-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 #vanity-region .img-badge {
   text-align: center;
-  margin-bottom: 20px
+  /*margin-bottom: 20px*/
 }
 #vanity-region li.media-item a {
   color: #555;
@@ -15,7 +22,7 @@
   font-size: 1.5em;
 }
 #vanity-region .vanity-layout {
-  margin-top: 50%;
+  text-shadow: rgba(255, 255, 255, 0.3) 1px 1px 1px;
 }
 #vanity-region .vanity-panel-text {
   margin-top: 10px;
@@ -33,6 +40,27 @@
   margin-top: 9px;
   color: #444;
 }
+#vanity-region ul.media-items {
+  text-align: center;
+}
+@media only screen {
+  #vanity-region .vanity-layout {
+    margin-top: 10px;
+  }
+  #vanity-region .vanity-panel-text {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+  #vanity-region .vanity-layout {
+    margin-top: 50%;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  #vanity-region .vanity-layout {
+    margin-top: 50%;
+  }
+}
 @media print {
   #vanity-region .vanity-panel-text {
     margin-top: 0px;
@@ -49,6 +77,8 @@
   }
   #vanity-region .vanity-layout {
     margin-top: 10px;
+    height: 600px;
+    margin-bottom: 10px;
   }
   #vanity-region .vanity-media-items {
     float: left;

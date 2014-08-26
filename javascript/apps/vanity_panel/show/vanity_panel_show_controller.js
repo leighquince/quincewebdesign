@@ -1,10 +1,11 @@
 define(["app",
     "javascript/apps/vanity_panel/show/vanity_panel_show_view",
-    "javascript/entities/media_item",
+    "javascript/constants/media_item",
 ], function(App, View) {
     App.module("VanityPanelApp.Show", function(Show, App, Backbone, Marionette, $, _) {
         Show.Controller = Marionette.Controller.extend({
             initialize: function(options) {
+                this.model = options.model.get("basics");
                 this.layout = new View.Layout();
 
                 App.vanityRegion.show(this.layout);
@@ -12,29 +13,33 @@ define(["app",
 
                 this.badgeView = new View.BadgeItem({
                     model: new Backbone.Model({
-                        src: "images/me.jpg",
-                        name: "Leigh Quince",
+                        src: this.model.get("picture"),
+                        name: this.model.get("name"),
                         details: [{
                             icon: "fa-home",
-                            value: "Ticino, Switzerland"
+                            value: this.model.get("location") ?
+                                this.model.get("location").get("region") + ", " + this.model.get("location").get("country") : null
                         }, {
                             icon: "fa-phone",
-                            value: "+41 1 12 12 12 12"
-                        }, ]
+                            value: this.model.get("phone")
+                        }]
                     })
                 });
 
                 this.layout.badgeRegion.show(this.badgeView);
 
-                var mediaItemsPromise = App.request("media_item:entities:get");
 
-                $.when(mediaItemsPromise).done($.proxy(function(collection) {
-                    this.mediaItemsView = new View.MediaItems({
-                        collection: collection
+                this.model.get("profiles").forEach(function(profile) {
+                    profile.set({
+                        icon: App.request("constants:icon_map:get", profile.get("network"))
                     });
+                });
 
-                    this.layout.mediaItemsRegion.show(this.mediaItemsView);
-                }, this));
+                this.mediaItemsView = new View.MediaItems({
+                    collection: this.model.get("profiles")
+                });
+
+                this.layout.mediaItemsRegion.show(this.mediaItemsView);
             },
 
         });

@@ -30,7 +30,7 @@ define(["app",
             View.MediaItems = Marionette.CollectionView.extend({
                 childView: View.MediaItem,
                 tagName: "ul",
-                className: "media-items small-block-grid-4"
+                className: "media-items small-block-grid-5"
 
             });
         });

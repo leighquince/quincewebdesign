@@ -1,0 +1,261 @@
+{
+    "basics": {
+        "name": "Leigh Quince",
+        "label": "Programmer",
+        "picture": "images/me.jpg",
+        "email": "leighquince@quincewebdesign.com",
+        "phone": "+41 1 12 12 12 12",
+        "website": "http://www.quincewebdesign.com",
+        "summary": "I was previously a teacher of ICT and Computing for 5 years located in London. I am now a web developer working in Switzerland. My main responsibility is leading the design, development and testing of our front-end products, using HTML, CSS, JavaScript, require.js, Backbone/Marionette and JQuery to produce feature rich single page applications. In development I also make use of Mockjax to allow for a front-end first approach when developing. Tools such as Grunt help turning the development code into production ready code. In addition to my front-end responsibilities I am also working on our back-end, using Java, Spring and Hibernate to create our services, testing all development using JUnit and Mockito. I have also had the chance to develop for Android, creating an app to support one of our services using the android development studio. In my spare time, depending on the time of the year, I can either be found on the mountain skiing or in the lake canoeing.",
+        "location": {
+            "address": "Apartmento 20, Condominio Belverde, Via al Parcoo",
+            "postalCode": "6817",
+            "city": "Maroggia",
+            "countryCode": "CH",
+            "region": "Ticino",
+            "country": "Swizterland"
+        },
+        "profiles": [{
+            "network": "git_hub",
+            "username": "leighquince",
+            "url": "https://github.com/leighquince"
+        }, {
+            "network": "linkedin",
+            "username": "leighquince",
+            "url": "http://uk.linkedin.com/pub/leigh-quince/39/762/aa5"
+        }, {
+            "network": "stack_overflow",
+            "username": "leighquince",
+            "url": "http://stackoverflow.com/users/2737978/quince"
+        }, {
+            "network": "you_tube",
+            "username": "quinceX12",
+            "url": "http://www.youtube.com/user/QuinceX12"
+        }, {
+            "network": "email",
+            "username": null,
+            "url": "mailto:leighquince@quincewebdesign.com"
+        }]
+    },
+    "work": [{
+        "company": "Domosafety",
+        "position": "Web Developer",
+        "website": "http://www.domo-safety.com",
+        "startDate": "2013-09-01",
+        "endDate": null,
+        "summary": "DomoSafety provides a homecare service designed for seniors to allow them to continue living in their own home. The core of the solution identifies potential risks that could lead to increased fragility and loss of mobility. The right people can have timely access to any change in state or sudden change in routine habits. The DomoSafety solution reaches out and connects the relevant environment of caregivers by displaying historical information as well as real time routine checks. No matter the distance, caregivers can have a simplified view accessible using mobile devices such as tablets (ipad) and smart phones.",
+        "highlights": [
+            "In-house web developer playign a key role in developing products and services.",
+            "Front-end lead responsible for design, implementation and testing of domo-safety front-end products using backbone/marionette to create single page applications",
+            "Development and testing of back end services using Java, Spring and hibernate, JUnit and Mockito.",
+            "Development of Android App Domoinstall.",
+            "Agile development using SCRUM methodology"
+        ]
+    }, {
+        "company": "Riddlesdown Collegiate",
+        "position": "Teacher of ICT/ Curriculum Leader (ICT & Computing)/ (Acting) Assistant Director of Learning (ICT & Computing)",
+        "website": "http://www.riddlesdown.org",
+        "startDate": "2008-09-01",
+        "endDate": "2013-08-31",
+        "summary": "Secondary education high school based on the outskirts of London with nearly 2000 students and a staff of more than 100",
+        "highlights": [
+            "Assisting and leading a team of teachers in ICT and Computing across the Collegiate, ensuring the development of the highest quality of teaching and learning.",
+            "Developing a system to track and analyses student data across Collegiate to highlight areas of action.",
+            "Implementing a Computing curriculum within KS5 and KS3.",
+            "Development of Virtual Learning Environment and training of system within the Collegiate.",
+            "Training of ICT team to develop Computer Science subject knowledge."
+        ]
+    }, {
+        "company": "Nice Group",
+        "position": "Web Developer",
+        "website": null,
+        "startDate": "2008-07-01",
+        "endDate": "2008-08-31",
+        "summary": "Investment group focused on property investment. ",
+        "highlights": [
+            "In-house web developer using PHP, MySQL and action script.",
+            "Adding features to existing system as required.",
+            "Prototyping direct debit system.",
+            "Creating design and analysis documentation in the form of use case and class diagrams.",
+            "Following traditional systems life cycle on small-scale features being implemented into the system."
+        ]
+    }],
+    "volunteer": null,
+    "education": [{
+        "institution": "Southampton University",
+        "area": "Post Graducate Certificate of Education: Secondary Education ICT",
+        "studyType": "Post Graducate",
+        "startDate": "2007-09-01",
+        "endDate": "2008-06-01",
+        "gpa": null,
+        "courses": [
+            "PGCE Secondary Education ICT"
+        ]
+    }, {
+        "institution": "Southampton Solent University",
+        "area": " BSc (Hons) Internet Application Development",
+        "studyType": "Bachelor",
+        "startDate": "2004-09-01",
+        "endDate": "2007-07-01",
+        "gpa": "2:1",
+        "courses": [
+            "(2:1) BSc(Hons) Internet Application Development"
+        ]
+    }, {
+        "institution": "Purbeck School, Dorset",
+        "area": "Secondary Education",
+        "studyType": "High School",
+        "startDate": "2000-09-01",
+        "endDate": "2003-07-31",
+        "gpa": null,
+        "courses": [
+            "3 A Levels Grade B - C",
+            "10 GCSE’s Grade A - C"
+        ]
+    }],
+    "awards": null,
+    "publications": null,
+    "skills": [{
+        "name": "Front End",
+        "level": null,
+        "keywords": [
+            "JavaScript",
+            "Backbone",
+            "Marionette",
+            "jQuery",
+            "Chart.js",
+            "Require.js",
+            "Mockjax",
+            "HTML5",
+            "CSS3",
+            "Grunt",
+            "Bower"
+        ]
+    }, {
+        "name": "Back End",
+        "level": null,
+        "keywords": [
+            "Java",
+            "Spring",
+            "Hibernate",
+            "PHP",
+            "Wordpress",
+            "Apache",
+            "Junit",
+            "Mockito",
+            "JSP",
+            "MySql",
+            "PostgreSQL"
+        ]
+    }, {
+        "name": "General",
+        "level": null,
+        "keywords": [
+            "Android Development", "Curriculum development", "data analysis", "outstanding teaching", "effective team management", "excellent resource creation"
+        ]
+    }],
+    "languages": [{
+        "language": "English",
+        "fluency": "Native speaker"
+    }],
+    "projects": [{
+        "name": "Teachers Tool Box",
+        "startDate": "2013-02-01",
+        "endDate": null,
+        "website": "http://www.quincewebdesign.com/teacherstoolbox/",
+        "highlights": [
+            "Design and development of report writing tool to assist teachers.",
+            "Use of twitter bootstrap and Laravel 4"
+        ]
+    }, {
+        "name": "Poker Bot @ www.theaigames.com",
+        "startDate": "2013-01-01",
+        "endDate": null,
+        "website": "https://github.com/leighquince/CheckCheckBurn.git",
+        "highlights": [
+            "AI competition for development of a poker bot to play heads up poker against other poker bots",
+            "My poker bot (checkechkburn) ranked 3rd in the competition only being defeated once in competition play.",
+            "Developed in Java"
+        ]
+    }, {
+        "name": "vle.riddlesdown.org",
+        "startDate": "2012-09-01",
+        "endDate": null,
+        "website": "vle.riddlesdown.org",
+        "highlights": [
+            "Customisation and development of Virtual Learning Environment for Riddlesdown Collegiate.",
+            "Implemented using WordPress, BuddyPress and Coursewa.re",
+            "Use of Fireworks, PHP, MySQL, JQuery and CSS3."
+        ]
+    }, {
+        "name": "Riddlesdown Colligate Extra Hours Claims Forms/Statement of absence forms/Trip request forms",
+        "startDate": "2011-08-01",
+        "endDate": null,
+        "website": null,
+        "highlights": [
+            "Design and development of 3 bespoke systems for use in Riddlesdown Collegiate.",
+            "Deployed into existing plugin I previously created for WordPress.",
+            "Use of PHP, MySQL, JQuery and CSS3."
+        ]
+    }, {
+        "name": "OCR Student Tracker",
+        "startDate": "2011-01-01",
+        "endDate": null,
+        "website": null,
+        "highlights": []
+    }, {
+        "name": null,
+        "startDate": null,
+        "endDate": null,
+        "website": "",
+        "highlights": [
+            "Development of custom student grade tracker.",
+            "Used to track 640 students with roughly 1800 grades.",
+            "Algorithm to display statistical analysis on students and groups of students.",
+            "Use of PHP, MySQL, JQuery and CSS3."
+        ]
+    }, {
+        "name": "Riddlesdown Colligate Cover request System",
+        "startDate": "2010-10-01",
+        "endDate": null,
+        "website": null,
+        "highlights": [
+            "Design and development of a cover request system.",
+            "Automatic emailing of cover acceptance/denial, token generation for easy staff access.",
+            "Use of PHP, MySQL, JQuery and CSS3",
+            "Created as a custom plugin for WordPress for ease of deployment on to existing intranet."
+        ]
+    }, {
+        "name": "www.riddlesdown.org",
+        "startDate": "2010-07-01",
+        "endDate": null,
+        "website": "www.riddlesdown.org",
+        "highlights": [
+            "Design and development of Riddlesdown Colligates website using WordPress",
+            "Use of Photoshop, Fireworks, PHP, MySQL, JQuery and CSS3"
+        ]
+    }],
+    "interests": [{
+        "name": "Skiing",
+        "keywords": null
+    }, {
+        "name": "Golf",
+        "keywords": null
+    }, {
+        "name": "Sport",
+        "keywords": null
+    }, {
+        "name": "Travelling",
+        "keywords": null
+    }, {
+        "name": "Outdoor Adventure",
+        "keywords": null
+    }, {
+        "name": "Music Festivals",
+        "keywords": null
+    }, {
+        "name": "Gaming",
+        "keywords": null
+    }],
+    "references": null
+}

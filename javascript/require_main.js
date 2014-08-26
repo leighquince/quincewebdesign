@@ -57,8 +57,8 @@ requirejs.config({
 });
 require(["app",
     'foundation',
+    'javascript/common/backbone_patches',
     'javascript/apps/server/server_app',
-    'javascript/apps/vanity_panel/vanity_panel_app',
 ], function(App) {
     App.start();
 });
