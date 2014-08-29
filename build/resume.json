@@ -181,7 +181,7 @@
         "name": "vle.riddlesdown.org",
         "startDate": "2012-09-01",
         "endDate": null,
-        "website": "vle.riddlesdown.org",
+        "website": "http://vle.riddlesdown.org",
         "highlights": [
             "Customisation and development of Virtual Learning Environment for Riddlesdown Collegiate.",
             "Implemented using WordPress, BuddyPress and Coursewa.re",
@@ -229,7 +229,7 @@
         "name": "www.riddlesdown.org",
         "startDate": "2010-07-01",
         "endDate": null,
-        "website": "www.riddlesdown.org",
+        "website": "http://www.riddlesdown.org",
         "highlights": [
             "Design and development of Riddlesdown Colligates website using WordPress",
             "Use of Photoshop, Fireworks, PHP, MySQL, JQuery and CSS3"

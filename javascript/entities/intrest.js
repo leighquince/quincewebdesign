@@ -10,12 +10,12 @@ define(["app"],
             });
 
             Entities.IntrestCollection = Backbone.Collection.extend({
-                model: Entities.intrest
+                model: Entities.Intrest
             });
 
             var API = {
                 newIntrestEntity: function(intrest) {
-                    var model = new Entities.intrest();
+                    var model = new Entities.Intrest();
                     model.set({
                         name: intrest.name,
                         keywords: intrest.keywords

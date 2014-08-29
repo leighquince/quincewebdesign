@@ -1,28 +1,27 @@
 {
-  "name": "the-game",
-  "version": "0.0.1",
-  "authors": [
-    "Leigh Quince <leighquince@quincewebdesign.com>"
-  ],
-  "description": "various games",
-  "license": "MIT",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "Faker": "~1.0.1",
-    "fontawesome": "~4.1.0",
-    "jquery-mockjax": "~1.5.3",
-    "foundation": "~5.3.3",
-    "mocha": "~1.21.3",
-    "moment": "~2.8.1",
-    "sinon-chai": "~2.5.0",
-    "marionette": "~2.1.0",
-    "require": "*"
-  }
+    "name": "the-game",
+    "version": "0.0.1",
+    "authors": [
+        "Leigh Quince <leighquince@quincewebdesign.com>"
+    ],
+    "description": "various games",
+    "license": "MIT",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "fontawesome": "~4.1.0",
+        "jquery-mockjax": "~1.5.3",
+        "foundation": "~5.3.3",
+        "mocha": "~1.21.3",
+        "moment": "~2.8.1",
+        "sinon-chai": "~2.5.0",
+        "marionette": "~2.1.0",
+        "require": "*"
+    }
 }

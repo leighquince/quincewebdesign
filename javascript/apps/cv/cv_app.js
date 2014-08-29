@@ -50,7 +50,7 @@ define(["app"],
              * @return {[type]}          [description]
              */
             App.on("cv:show", function(model) {
-                App.navigate("cv");
+                //App.navigate("cv");
                 API.cvShow({
                     model: model
                 });

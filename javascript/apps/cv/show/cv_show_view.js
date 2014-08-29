@@ -3,12 +3,20 @@ define(["app",
         "text!javascript/apps/cv/show/templates/cv_basics.hbs",
         "text!javascript/apps/cv/show/templates/cv_collection.hbs",
         "text!javascript/apps/cv/show/templates/cv_skill.hbs",
+        "text!javascript/apps/cv/show/templates/cv_work.hbs",
+        "text!javascript/apps/cv/show/templates/cv_project.hbs",
+        "text!javascript/apps/cv/show/templates/cv_education.hbs",
+        "text!javascript/apps/cv/show/templates/cv_intrest.hbs",
     ],
     function(App,
         CvLayoutHbs,
         CvBasicsHbs,
         CvCollectionHbs,
-        CvSkillHbs
+        CvSkillHbs,
+        CvWorkHbs,
+        CvProjectHbs,
+        CvEducationHbs,
+        CvIntrestHbs
     ) {
         App.module("CvApp.Show.View", function(View, App, Backbone, Marionette, $, _) {
 
@@ -28,14 +36,12 @@ define(["app",
 
             View.BasicsView = Marionette.ItemView.extend({
                 template: Handlebars.compile(CvBasicsHbs),
-
             });
 
             View.CvCollectionView = Marionette.CompositeView.extend({
                 sort: false,
                 template: Handlebars.compile(CvCollectionHbs),
                 childViewContainer: ".collection-hook",
-
             });
 
             View.SkillView = Marionette.ItemView.extend({
@@ -43,34 +49,27 @@ define(["app",
                 initialize: function() {
                     this.$el.attr("data-equalizer", "");
                 }
-
-
             });
 
             View.WorkView = Marionette.ItemView.extend({
-                template: Handlebars.compile(CvBasicsHbs),
-
+                template: Handlebars.compile(CvWorkHbs),
+                className: "large-12 columns cv-work-item"
             });
-
 
             View.EducationView = Marionette.ItemView.extend({
-                template: Handlebars.compile(CvBasicsHbs),
-
+                template: Handlebars.compile(CvEducationHbs),
+                className: "large-12 columns cv-education-item"
             });
-
 
             View.ProjectView = Marionette.ItemView.extend({
-                template: Handlebars.compile(CvBasicsHbs),
-
+                template: Handlebars.compile(CvProjectHbs),
+                className: "large-12 columns cv-projects-item"
             });
-
 
             View.IntrestView = Marionette.ItemView.extend({
-                template: Handlebars.compile(CvBasicsHbs),
-
+                template: Handlebars.compile(CvIntrestHbs),
+                className: "cv-intrests-item"
             });
-
-
         });
 
         return App.CvApp.Show.View;

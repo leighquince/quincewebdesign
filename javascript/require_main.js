@@ -27,10 +27,7 @@ requirejs.config({
         backbone: "bower_components/backbone/backbone",
         foundation: "bower_components/foundation/js/foundation.min",
         fastclick: "bower_components/foundation/js/vendor/fastclick",
-        "jquery.mockjax": "bower_components/jquery-mockjax/jquery.mockjax",
-        faker: "bower_components/faker/faker",
         moment: 'bower_components/moment/moment',
-        responses: "javascript/mockjax_response/responses",
         app: 'javascript/app'
     },
     shim: {
@@ -49,10 +46,8 @@ requirejs.config({
             exports: 'Marionette'
         },
         'jquery.placeholder': ['jquery'],
-        'jquery.mockjax': ['jquery'],
         foundation: ['jquery', 'jquery.cookie', 'jquery.placeholder', 'modernizr', 'fastclick'],
-        responses: ['jquery.mockjax', 'faker'],
-        app: ['backbone', 'marionette', 'foundation', 'moment', 'responses']
+        app: ['backbone', 'marionette', 'foundation', 'moment']
     }
 });
 require(["app",

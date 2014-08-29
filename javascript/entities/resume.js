@@ -46,7 +46,7 @@ define(["app",
                                 skills: data.skills ? App.request("skill:entities:new", data.skills) : null,
                                 languages: data.languages ? App.request("language:entities:new", data.languages) : null,
                                 projects: data.projects ? App.request("project:entities:new", data.projects) : null,
-                                intrests: data.intrests ? App.request("intrest:entities:new", data.intrests) : null,
+                                interests: data.interests ? App.request("intrest:entities:new", data.interests) : null,
                                 refrences: data.references ? App.request("reference:entities:new", data.references) : null,
 
                             });

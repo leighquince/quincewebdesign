@@ -21,6 +21,10 @@ body {
   }
   #main-region {
     width: 100%;
+    font-size: 12px
+  }
+  #main-region ul {
+    margin-top: 5px;
   }
 }
 @media only screen {

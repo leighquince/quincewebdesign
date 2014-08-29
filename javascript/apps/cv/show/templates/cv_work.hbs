@@ -1,0 +1,31 @@
+<div class="work-section-company">
+  {{#if website}}
+  <h4> <a href="{{website}}" target="_blank">
+    {{company}}
+  </a>
+  </h4>
+  {{else}}
+  <h4>{{company}}</h4>
+  {{/if}}
+</div>
+<div class="work-section-position">
+  {{position}}
+</div>
+<div class="work-section-dates">
+  <div class="work-section-start-date">
+    {{!-- {{HB_momentFormatDate startDate}} --}}
+  </div>
+  <div class="work-section-end-date">
+    {{!-- {{HB_momentFormatDate endDate}} --}}
+  </div>
+</div>
+<div class="work-section-summary">
+  <blockquote>{{summary}}</blockquote>
+</div>
+<div class="work-section-highlights">
+  <ul class="work-section-highlight-list">
+    {{#each highlights}}
+    <li class="work-section-highlight-list-item">{{this}}</li>
+    {{/each}}
+  </ul>
+</div>

@@ -1,0 +1,18 @@
+<div class="education-section-institution">
+  {{institution}}
+</div>
+<div class="education-section-dates">
+  <div class="education-section-start-date">
+    {{!-- {{HB_momentFormatDate startDate}} --}}
+  </div>
+  <div class="education-section-end-date">
+    {{!-- {{HB_momentFormatDate endDate}} --}}
+  </div>
+</div>
+<div class="education-section-courses">
+  <ul class="education-section-courses-list">
+    {{#each courses}}
+    <li class="education-section-courses-list-item">{{this}}</li>
+    {{/each}}
+  </ul>
+</div>

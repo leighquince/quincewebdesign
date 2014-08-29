@@ -10,11 +10,6 @@ define(["app", ], function(App) {
         Server.onStop = function() {
             console.log("stopping server");
         };
-        //CONSTANTS
-        Server.RESULT_TYPE_SUCCESS = "success";
-        Server.RESULT_TYPE_ERROR = "error";
-
-        var _instance = undefined;
 
         var API = {
             sendCommand: function(url, method, parameters, successCallback, errorCallback, completeCallback) {
@@ -24,43 +19,20 @@ define(["app", ], function(App) {
                     data: parameters,
                     type: method,
                     success: function(data, textStatus, jqXHR) {
-                        if (successCallback) {
-                            successCallback(data, textStatus, jqXHR);
-                        }
-                        // if (null == data) {
-                        //    return;
-                        // }
-                        // if (data.result_type === Server.RESULT_TYPE_SUCCESS) {
-
-                        //    if (successCallback) {
-                        //       successCallback(data, textStatus, jqXHR);
-                        //    }
-                        // } else if (data.result_type === Server.RESULT_TYPE_ERROR) {
-                        //    if (errorCallback) {
-                        //       App.request("notification:entity:add", "SEVER_ERROR", "critical", data.error);
-                        //       errorCallback(data);
-                        //    }
-                        // } else {
-
-                        // }
+                        successCallback && successCallback(data, textStatus, jqXHR);
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
-                        //App.request("notification:entity:add", "SEVER_ERROR", "critical", textStatus);
-                        //console.log(jqXHR);
-                        if (errorCallback) {
-                            errorCallback({
-                                "result_type": Server.RESULT_TYPE_ERROR,
-                                "error": jqXHR.responseText,
-                                "jqXHR": jqXHR,
-                                "textStatus": textStatus,
-                                "errorThrown": errorThrown
-                            });
-                        }
+                        errorCallBack && errorCallback({
+                            "result_type": Server.RESULT_TYPE_ERROR,
+                            "error": jqXHR.responseText,
+                            "jqXHR": jqXHR,
+                            "textStatus": textStatus,
+                            "errorThrown": errorThrown
+                        });
+
                     },
                     complete: function(jqXHR, textStatus) {
-                        if (completeCallback) {
-                            completeCallback(jqXHR, textStatus);
-                        }
+                        completeCallback && completeCallback(jqXHR, textStatus);
                     }
                 });
             },

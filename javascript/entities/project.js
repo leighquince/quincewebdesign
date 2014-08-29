@@ -20,7 +20,7 @@ define(["app", 'moment'],
                 newProjectEntity: function(project) {
                     var model = new Entities.Project();
                     model.set({
-                        name: project.anme,
+                        name: project.name,
                         startDate: project.startDate ? new Moment(project.startDate, "YYYY-MM-DD") : null,
                         endDate: project.endDate ? new Moment(project.endDate, "YYYY-MM-DD") : null,
                         website: project.website,
