@@ -1,9 +1,10 @@
 @import url('font-awesome.css');
-@import url('../bower_components/foundation/css/foundation.css');
 @import url('../bower_components/foundation/css/normalize.css');
+@import url('../bower_components/foundation/css/foundation.css');
 @import url('foundation-patches.css');
 @import url('style.css');
 @import url('modal.css');
 @import url('vanity-region.css');
 @import url('cv-app.css');
 @import url('tag.css');
+@import url('footer.css');

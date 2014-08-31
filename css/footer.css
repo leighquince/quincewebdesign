@@ -1,0 +1,12 @@
+#footer-content {
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    border-top: 1px solid #ccc;
+    padding: 1em;
+    color: #999;
+}
+#footer-content p {
+    font-size: 0.8em;
+    line-height: 110%;
+}

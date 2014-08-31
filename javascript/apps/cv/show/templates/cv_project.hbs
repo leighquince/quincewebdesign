@@ -1,23 +1,21 @@
-<div class="cv-section-details row">
-  <div class="project-section-name large-6 columns">
-    {{#if website}}
-    <h4> <a href="{{website}}" target="_blank">
-      {{name}}
-    </a>
-    </h4>
-    {{else}}
+<div class="project-section-name">
+  {{#if website}}
+  <h4> <a href="{{website}}" target="_blank">
+    {{name}}
+  </a>
+  </h4>
+  {{else}}
 
-    <h4>{{name}}</h4>
-    {{/if}}
-  </div>
+  <h4>{{name}}</h4>
+  {{/if}}
+</div>
 
-  <div class="project-section-dates large-6 columns">
-    <div class="project-section-start-date date-stamp">
-      <p>{{HB_momentFormatDate startDate}}</p>
-    </div>
+<div class="project-section-dates">
+  <div class="project-section-start-date date-stamp">
+     <span class="label date-stamp-label">{{HB_momentFormatDate startDate}}</span>
   </div>
 </div>
-<div class="project-section-highlights row">
+<div class="project-section-highlights">
   <ul class="project-section-highlight-list">
     {{#each highlights}}
     <li class="project-section-highlight-list-item">{{this}}</li>

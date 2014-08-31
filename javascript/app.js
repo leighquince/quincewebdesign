@@ -3,6 +3,7 @@ define(['marionette'], function(Marionette) {
     App.addRegions({
         mainRegion: "#main-content",
         vanityRegion: "#vanity-region",
+        footerRegion: "#footer-content",
         dialogRegion: "#dialog-region"
     });
     App.navigate = function(route, options) {
@@ -25,35 +26,30 @@ define(['marionette'], function(Marionette) {
             currentApp.start(args);
         }
     };
-    App.resize = function() {
-        console.log("resizing");
-        if ($(document).width <= 640) {
-            App.vanityRegion.$el.height(200);
-            App.mainRegion.$el.height($(document).height() - 200);
-        } else {
-            App.vanityRegion.$el.height($(document).height());
-            App.mainRegion.$el.height($(document).height());
-        }
-    };
+    
     App.on("start", function() {
         if (Backbone.history) {
             require([
                 "javascript/apps/cv/cv_app",
                 "javascript/apps/vanity_panel/vanity_panel_app",
-                "javascript/apps/cv/cv_app",
+                "javascript/apps/footer/footer_app",
                 "javascript/entities/resume",
             ], function() {
                 Backbone.history.start();
                 $(document).foundation();
+
                 var promise = App.request("resume:entity:get");
 
                 $.when(promise).done(function(model) {
                     App.trigger("vanity_panel:show", model);
                     App.trigger("cv:show", model);
+                    
 
                 }).fail(function(data) {
                     console.log("fail");
                     console.error(data);
+                }).always(function(){
+                    App.trigger("footer:show");
                 });
 
 

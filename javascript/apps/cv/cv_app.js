@@ -37,7 +37,7 @@ define(["app"],
                         function(ShowController) {
                             var showController = executeAction("CvApp.Show", options);
 
-                            App.mainRegion.show(showController.layout);
+                            App.mainRegion.show(showController.getMainView());
 
 
                         });

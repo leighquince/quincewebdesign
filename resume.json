@@ -129,7 +129,9 @@
             "HTML5",
             "CSS3",
             "Grunt",
-            "Bower"
+            "Bower",
+            "Bootstrap",
+            "Foundation"
         ]
     }, {
         "name": "Back End",
@@ -151,7 +153,19 @@
         "name": "General",
         "level": null,
         "keywords": [
-            "Android Development", "Curriculum development", "data analysis", "outstanding teaching", "effective team management", "excellent resource creation"
+            "Android Development", 
+            "Curriculum development", 
+            "Data Analysis", 
+            "Outstanding Teaching", 
+            "Effective Team Management", 
+            "Excellent Resource Creation",
+            "Problem Solving",
+            "Fast Learner",
+            "Agile",
+            "Windows Development Environment",
+            "Mac Development Environment",
+            "SVN",
+            "Git"
         ]
     }],
     "languages": [{

@@ -67,6 +67,14 @@ define(["app",
 
             },
 
+            /**
+             * return the main view for this sub app
+             * @return {[type]} [description]
+             */
+            getMainView: function(){
+                return this.layout;
+            }
+
         });
     });
     return App.CvApp.Show.Controller;
