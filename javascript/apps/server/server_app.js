@@ -1,16 +1,12 @@
 define(["app", ], function(App) {
     App.module("Server", function(Server, App, Backbone, Marionette, $, _) {
-
         Server.startWithParent = true;
-
         Server.onStart = function() {
             console.log("starting server");
         };
-
         Server.onStop = function() {
             console.log("stopping server");
         };
-
         var API = {
             sendCommand: function(url, method, parameters, successCallback, errorCallback, completeCallback) {
                 $.ajax({
