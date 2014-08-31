@@ -3,13 +3,6 @@ requirejs.config({
     config: {
         text: {
             useXhr: function(url, protocol, hostname, port) {
-                //Override function for determining if XHR should be used.
-                //url: the URL being requested
-                //protocol: protocol of page text.js is running on
-                //hostname: hostname of page text.js is running on
-                //port: port of page text.js is running on
-                //Use protocol, hostname, and port to compare against the url
-                //being requested.
                 //Return true or false. true means "use xhr", false means
                 //"fetch the .js version of this resource".
                 return true;
@@ -47,12 +40,13 @@ requirejs.config({
         },
         'jquery.placeholder': ['jquery'],
         foundation: ['jquery', 'jquery.cookie', 'jquery.placeholder', 'modernizr', 'fastclick'],
-        app: ['backbone', 'marionette', 'foundation', 'moment']
+        app: ['marionette', 'foundation', 'moment']
     }
 });
 require(["app",
     'foundation',
     'javascript/common/backbone_patches',
+    'javascript/common/handlebars_common_helpers',
     'javascript/apps/server/server_app',
 ], function(App) {
     App.start();

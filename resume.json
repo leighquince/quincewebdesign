@@ -202,12 +202,6 @@
         "startDate": "2011-01-01",
         "endDate": null,
         "website": null,
-        "highlights": []
-    }, {
-        "name": null,
-        "startDate": null,
-        "endDate": null,
-        "website": "",
         "highlights": [
             "Development of custom student grade tracker.",
             "Used to track 640 students with roughly 1800 grades.",

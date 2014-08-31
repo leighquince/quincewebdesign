@@ -45,9 +45,9 @@ module.exports = function(grunt) {
                     findNestedDependencies: true,
                     // If we set up a path to the require lib, we can include it as part of the build and avoid a separate HTTP request
                     inlineText: true,
-                    // Specify what minifier to use and any minifier specific configuration. We have chooe not to mangle the output to avoid problems with the variable names and the Rickshaw Library
+                    // Specify what minifier to use and any minifier specific configuration.
                     uglify2: {
-                        mangle: false
+                        mangle: true
                     },
                     optimize: 'uglify2',
                     include: 'bower_components/require/build/require.js'

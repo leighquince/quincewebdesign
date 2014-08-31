@@ -26,6 +26,44 @@
   float: left;
   margin-right: 5px;
 }
+
+.date-stamp{
+  height: 100px;
+border: 1px solid #ccc;
+width: 100px;
+border-radius: 50%;
+/*padding-top: 0.4em;*/
+/* padding-left: 35px; */
+font-size: 1.5em;
+line-height: 1.5em;
+text-align: center;
+font-weight: bold;
+text-transform: uppercase;
+float:left;
+}
+
+.date-stamp p {
+vertical-align: middle;
+margin-bottom: 0;
+text-align: center;
+display: table-cell;
+height: 100px;
+width: 100px;
+}
+.date-stamp-end {
+float: right;
+}
+.date-stamp-end:before {
+content: '';
+width: calc(100% - 227px);
+height: 1px;
+background-color: #ccc;
+position: absolute;
+left: 0;
+margin-left: 114px;
+top: 50%;
+z-index: 1;
+}
 @media print {
   .cv-layout .cv-section-skill-name {
     height: 20px !important

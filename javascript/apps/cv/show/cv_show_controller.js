@@ -4,7 +4,6 @@ define(["app",
     App.module("CvApp.Show", function(Show, App, Backbone, Marionette, $, _) {
         Show.Controller = Marionette.Controller.extend({
             initialize: function(options) {
-                console.log(options);
                 this.model = options.model;
                 this.layout = new View.Layout();
 
@@ -12,7 +11,6 @@ define(["app",
                     model: this.model.get("basics"),
 
                 });
-
 
                 this.skillsView = new View.CvCollectionView({
                     childView: View.SkillView,
@@ -55,8 +53,6 @@ define(["app",
                     className: "",
                     collection: this.model.get("interests")
                 });
-
-                console.log(this.model.get("interests"))
 
                 this.listenTo(this.layout, "show", $.proxy(function() {
                     this.layout.basicsRegion.show(this.basicsView);

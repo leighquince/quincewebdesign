@@ -23,7 +23,7 @@ define(["app", 'moment'],
                         institution: education.institution,
                         studyType: education.studyType,
                         startDate: education.startDate ? new Moment(education.startDate, "YYYY-MM-DD") : null,
-                        endDate: education.startDate ? new Moment(education.startDate, "YYYY-MM-DD") : null,
+                        endDate: education.endDate ? new Moment(education.endDate, "YYYY-MM-DD") : null,
                         gpa: education.gpa,
                         courses: education.courses,
 
