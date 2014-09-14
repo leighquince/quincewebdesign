@@ -5,9 +5,11 @@ define(["app",
         App.module("VanityPanelApp", function(VanityPanelApp, App, Backbone, Marionette, $, _) {
             var API = {
                 showVanityPanel: function(model) {
-                    VanityPanelApp.showController = new ShowController({
+                    var showController = new ShowController({
                         model: model
                     });
+
+                    App.vanityRegion.show(showController.layout);
                 }
 
             };

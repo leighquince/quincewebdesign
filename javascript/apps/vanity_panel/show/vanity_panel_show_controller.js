@@ -8,9 +8,6 @@ define(["app",
                 this.model = options.model.get("basics");
                 this.layout = new View.Layout();
 
-                App.vanityRegion.show(this.layout);
-
-
                 this.badgeView = new View.BadgeItem({
                     model: new Backbone.Model({
                         src: this.model.get("picture"),
@@ -26,9 +23,6 @@ define(["app",
                     })
                 });
 
-                this.layout.badgeRegion.show(this.badgeView);
-
-
                 this.model.get("profiles").forEach(function(profile) {
                     profile.set({
                         icon: App.request("constants:icon_map:get", profile.get("network"))
@@ -39,7 +33,10 @@ define(["app",
                     collection: this.model.get("profiles")
                 });
 
-                this.layout.mediaItemsRegion.show(this.mediaItemsView);
+                this.listenTo(this.layout, "show", $.proxy(function() {
+                    this.layout.badgeRegion.show(this.badgeView);
+                    this.layout.mediaItemsRegion.show(this.mediaItemsView);
+                }, this));
             },
 
         });

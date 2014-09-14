@@ -12,6 +12,7 @@ define(["app",
                 regions: {
                     badgeRegion: "#badge-region",
                     mediaItemsRegion: "#media-items-region",
+                    graphItemsRegion: "#graph-items-region",
                 }
             });
 
@@ -24,6 +25,9 @@ define(["app",
                 template: Handlebars.compile(VanityPanelMediaItemHbs),
                 className: "media-item",
                 tagName: "li",
+            });
+            View.GraphItem = Marionette.ChartView.extend({
+                
             });
 
 

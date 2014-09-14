@@ -21,6 +21,7 @@ requirejs.config({
         foundation: "bower_components/foundation/js/foundation.min",
         fastclick: "bower_components/foundation/js/vendor/fastclick",
         moment: 'bower_components/moment/moment',
+        chart: 'bower_components/chartjs/Chart',
         app: 'javascript/app'
     },
     shim: {
@@ -46,6 +47,7 @@ requirejs.config({
 require(["app",
     'foundation',
     'javascript/common/backbone_patches',
+    'javascript/common/marionette_patches',
     'javascript/common/handlebars_common_helpers',
     'javascript/apps/server/server_app',
 ], function(App) {
